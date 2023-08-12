@@ -6,9 +6,9 @@ struct stack {
   int top;
 };
 
-typedef struct stack st;
+typedef struct stack st;//giving short name to stack
 
-void push(st *stack) {
+void push(st *stack) { //push function
   if (stack->top == max_size - 1) {
     printf("full");
   } else {
@@ -20,8 +20,8 @@ void push(st *stack) {
     printf("data pushed is %d\n", info);
   }
 }
-
-void pop(st *stack) {
+//pop function
+void pop(st *stack) {      
   if (stack->top == -1) {
     printf("empty stack");
   } else {
@@ -31,7 +31,7 @@ void pop(st *stack) {
     printf("deleted data is %d\n", item);
   }
 }
-
+//traversing given stack
 void traverse(st *stack) {
   int i;
   for (i = 0; i <= stack->top; i++) {
